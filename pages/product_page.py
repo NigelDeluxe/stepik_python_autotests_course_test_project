@@ -31,3 +31,11 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.product_price)
         cart_value = self.browser.find_element(*ProductPageLocators.cart_value)
         assert cart_value.text == product_price.text
+
+    def should_not_be_product_add_to_cart_notification(self):
+        assert self.is_not_element_present(*ProductPageLocators.product_add_to_cart_notification), \
+            "Add to cart notification is presented, but should not be"
+
+    def should_add_to_cart_notification_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.product_add_to_cart_notification), \
+            "Add to cart notification is not disappeared"

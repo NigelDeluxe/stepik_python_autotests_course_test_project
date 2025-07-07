@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    pass
 
 
 class LoginPageLocators:
@@ -18,3 +18,7 @@ class ProductPageLocators:
     product_name_in_add_to_cart_notification = (By.CSS_SELECTOR, "#messages > div:first-child strong")
     cart_value_notification = (By.CSS_SELECTOR, "#messages > div:last-child")
     cart_value = (By.CSS_SELECTOR, "#messages > div:last-child strong")
+
+
+class BasePageLocators:
+    login_link = (By.CSS_SELECTOR, "#login_link")
